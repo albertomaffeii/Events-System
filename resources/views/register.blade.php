@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Allsites IT - Home')
+@section('title', 'Allsites IT - Register')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     <div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">                        
             <div>
-                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to our Page</h2>
+                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to Register Page</h2>
             </div>
             <div></div>
         </div>
@@ -34,4 +34,5 @@
                 </div>
             </a>
         </div>
-@endsection
+        
+    @endsection

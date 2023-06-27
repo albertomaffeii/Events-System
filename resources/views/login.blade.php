@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Allsites IT - Events')
+@section('title', 'Allsites IT - Login')
 
 @section('content')
 
@@ -8,19 +8,7 @@
     <div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">                        
             <div>
-                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to our Page</h2>
-            </div>
-            <div></div>
-        </div>
-    </div>
-
-    <div class="mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">                        
-            <div>
-                
-            <b>[Home]</b>  
-                <a href="/products">Products</a>  
-                <a href="/contact">Contact</a>
+                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to Login Page</h2>
             </div>
             <div></div>
         </div>

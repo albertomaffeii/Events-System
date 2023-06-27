@@ -14,21 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $nome = "Alberto";
-    $idade = "56";
-    $arr = [10,20,30,40,50];
-
-    return view('welcome', 
-        [   
-            'nome' => $nome,
-            'idade' => $idade,
-            'profissao' => "Developer",
-            'arr' => $arr
-        ]);
+    return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/events', function () {
+    return view('events');
+});
+
+Route::get('/new-events', function () {
+    return view('new-events');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/events', function () {
+    return view('events');
 });
 
 Route::get('/contact', function () {

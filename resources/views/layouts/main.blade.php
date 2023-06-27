@@ -20,6 +20,39 @@
     </head>
 
     <body class="antialiased">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id ="navbar">
+                    <a href="/" class="navbar-brand">
+                        <img src="/img/logo.jpeg" alt="Allsites Events">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/events" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/new-events" class="nav-link">New Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/products" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
 
             @yield('content')
