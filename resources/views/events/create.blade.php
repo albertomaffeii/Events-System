@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Allsites IT - New Events')
+@section('title', 'Allsites IT - New Event')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     <div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">                        
             <div>
-                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to New Events Page</h2>
+                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to Create Event Page</h2>
             </div>
             <div></div>
         </div>

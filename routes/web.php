@@ -13,16 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\EventController;
+
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/products', [EventController::class,'products']);
+Route::get('/product/{id?}', [EventController::class,'product']);
+Route::get('/contact', [EventController::class, 'contact']);
 
 Route::get('/events', function () {
     return view('events');
-});
-
-Route::get('/new-events', function () {
-    return view('new-events');
 });
 
 Route::get('/login', function () {
@@ -33,19 +33,5 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/events', function () {
-    return view('events');
-});
 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/products', function () {
-    return view('products');
-});
-
-Route::get('/product/{id?}', function ($id = null) {
-    return view('product', ['id' => $id]);
-});
 
