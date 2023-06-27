@@ -39,7 +39,7 @@ Route::get('/products', function () {
     return view('products');
 });
 
-Route::get('/product/{id?}', function ($id) {
+Route::get('/product/{id?}', function ($id = null) {
     return view('product', ['id' => $id]);
 });
 
