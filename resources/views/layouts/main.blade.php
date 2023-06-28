@@ -9,7 +9,7 @@
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
 
         <!-- CSS Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -43,9 +43,6 @@
                             <a href="/register" class="nav-link">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/products" class="nav-link">Products</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="/contact" class="nav-link">Contact</a>
                         </li>
                     </ul>
@@ -58,22 +55,7 @@
             @yield('content')
 
             <footer>
-                <hr class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-            
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                        <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                            <div class="flex items-center gap-4">
-                                <a href="https://github.com/albertomaffeii/Api-Laravel-10" target="_blank" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <ion-icon name="heart"></ion-icon> Allsites IT
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                            Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                        </div>
-                    </div>
-                </div>        
+                <a href="https://github.com/albertomaffeii/Api-Laravel-10" target="_blank" >Allsites IT | Laravel v{{ Illuminate\Foundation\Application::VERSION }} | (PHP v{{ PHP_VERSION }})</a>
             </footer>        
         </div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
