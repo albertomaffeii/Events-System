@@ -50,12 +50,32 @@
             </nav>
         </header>
 
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        <div>
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                        <p class="msg">{{ session('msg')}}</p>
+                    @endif
+                    
+                    @yield('content')
+                </div>
+            </div>
+        </main>
 
-            @yield('content')
+            
 
             <footer>
-                <a href="https://github.com/albertomaffeii/Api-Laravel-10" target="_blank" >Allsites IT | Laravel v{{ Illuminate\Foundation\Application::VERSION }} | (PHP v{{ PHP_VERSION }})</a>
+                <dic class="row">
+                <div class="col-md-6">
+                    GitHub: 
+                <a href="https://github.com/albertomaffeii/Api-Laravel-10" target="_blank" >github.com/albertomaffeii</a>
+
+                </div>
+                <div class="col-md-6">
+                    <a href="http://allsites.com.br/events" target="_blank" >Allsites IT | Laravel v{{ Illuminate\Foundation\Application::VERSION }} | (PHP v{{ PHP_VERSION }})</a>
+                </div>
+                </dic>
             </footer>        
         </div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

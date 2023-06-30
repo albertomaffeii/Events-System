@@ -4,35 +4,38 @@
 
 @section('content')
 
-<div class="max-w-7xl mx-auto p-6 lg:p-8">
-    <div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">                        
-            <div>
-                <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">Welcome to Create Event Page</h2>
-            </div>
-            <div></div>
+<div id="event-create-container" class="col-md-6 offset-md-3">
+    <h1>Create your event</h1>
+    <form action="/events" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+            <label for="image">Event image:</label>
+            <input type="file" class="form-control-file" id="image" name="image" requiired>
         </div>
-    </div>
-
-    <div class="mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <a href="/products" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                <div>
-                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Our Products</h2>
-                    <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex tenetur reiciendis, natus in assumenda iure sapiente magni doloribus ab nulla animi delectus provident dolor quaerat ipsa placeat saepe veritatis sit!
-                    </p>
-                </div>
-            </a>
-
-            <a href="/contact" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                <div>
-                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Contact Us</h2>
-                    <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolorem quam alias porro ratione cupiditate distinctio commodi cumque unde. A, delectus culpa quod animi fugiat velit ex eius voluptatum dolor!
-                    </p>
-                </div>
-            </a>
+        <div class="form-group">
+            <label for="title">Event:</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Event's name"  requiired>
         </div>
-        
-    @endsection
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" class="form-control" placeholder="Event's place"  required>
+        </div>
+        <div class="form-group">
+            <label for="private">Is this a private event?</label>
+            <select name="private" id="private" class="form-control" required>
+                <option>Select</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" class="form-control" placeholder="What will happen at the event."></textarea>
+        </div>
+        <div class="sendBtnBox">
+            <input type="submit" class="btn btn-primary" value="create event">
+        </div>
+    </form>
+</div>
+
+@endsection
