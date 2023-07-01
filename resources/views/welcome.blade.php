@@ -19,13 +19,19 @@
             <div class="card col-md-3">
                 <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                 <div class="card-bord">
-                    <div class="card-date">2023/10/10</div>
                     <h5 class="card-title">{{ $event->title }}</h5>
+                    <div class="card-date">{{ date('d/m/Y', strtotime($event->date)) }} at {{ date('h:m', strtotime($event->time)) }}</div>
                     <p class="card-participants">100 Participants</p>
+                    <p class="card-participants">{{ $event->city }}</p>
                     <a href="/events/{{ $event->id }}" class="btn btn-primary">Read more</a>
                 </div>
             </div>
         @endforeach
+        
+        @if(count($events) == 0)
+            <p>There are no events scheduled for the next few days.</p>
+        @endif
+        
     </div>
 </div>
 

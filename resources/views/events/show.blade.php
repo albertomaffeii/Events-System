@@ -25,6 +25,15 @@
             </p>
 
             <a href="#" class="btn btn-primary" id="event-submit">Confirmar presença</a> 
+
+            <h3>The event features:</h3>
+            <ul id="items-list">
+                @foreach($event->items as $item)
+
+                    <li><ion-icon name="arrow-redo-outline"></ion-icon> <span>{{ $item }}</span><ion-icon name="checkmark-sharp"></ion-icon>
+
+                @endforeach
+            </ul>
         </div>   
 
         <div class="col-md-12" id="description-container">

@@ -136,7 +136,9 @@ header {
     color: #757575;
 }
 
-.card .card-title {
+.card .card-title {    
+    text-align: center;
+    padding-top: 15px;
     font-size: 20px;
     color: #212121;
     font-weight: bold;
@@ -223,4 +225,13 @@ footer a {
 
 #info-container #event-submit {
     margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
 }
