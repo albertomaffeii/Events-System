@@ -1,19 +1,25 @@
 @extends('layouts.main')
 
-@section('title', 'Allsites IT Events Home')
+@section('title', 'Allsites IT Events Dashboard')
 
 @section('content')
 
 <div id="search-container" class="col-md-12">
     <p></p>
-    <form action="" method="post">
+    <form action="/" method="GET">
         <input type="text" id="search" name="search" class="form-control" placeholder="Search Event ...">
     </form>
 </div>
 
 <div id="events-container" class="col md 12">
-    <h2>Next Events</h2>
-    <p class="subtitle">See the events of the next days</p>
+    @if($search)
+        <h2>Search for: {{ $search }}</h2>
+        <p><a href="/">Ver Todos</a></p>
+    @else
+        <h2>Next Events</h2>
+        <p class="subtitle">See the events of the next days</p>
+    @endif
+
     <div id="cards-container" class="row">
         @foreach($events as $event)
             <div class="card col-md-3">
@@ -28,10 +34,11 @@
             </div>
         @endforeach
         
-        @if(count($events) == 0)
+        @if(count($events) == 0 && $search)
+            <p>There are no events scheduled for the search key {{ $search }}!</p>
+        @elseif(count($events) == 0)
             <p>There are no events scheduled for the next few days.</p>
         @endif
-        
     </div>
 </div>
 
