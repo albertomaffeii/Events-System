@@ -150,26 +150,6 @@ header {
     color: #757575;
 }
 
-/* Footer */
-footer{
-text-align: center;
-background-color: cadetblue;
-color: #fff;
-padding: 30px;
-position: absolute;
-bottom: 0;
-width: 100%;
-}
-
-footer p {
-    margin-bottom: 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
 /* Event Create Page */
 #event-create-container {
     padding: 30px
@@ -207,6 +187,7 @@ footer a {
 
 #info-container h3, 
 #description-container h3{
+    margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -235,3 +216,44 @@ footer a {
 #items-list li {
     display: flex;
 }
+
+/* Dashboard */
+.dashboard-title-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-event-container th {
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.table td.action, th.action {
+    text-align: center;
+}
+
+
+/* Footer */
+footer{
+    text-align: center;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+    
