@@ -15,6 +15,10 @@
                 <ion-icon name="location-outline"></ion-icon>
                 {{ $event->city }}
             </p>
+            <p class="event-date">
+            <ion-icon name="calendar-outline"></ion-icon>
+                {{ date('d/m/Y', strtotime($event->date)) }} at {{ date('h:m', strtotime($event->time)) }}
+</p>
             <p class="events-participants">
                 <ion-icon name="people-outline"></ion-icon>
                 100 Participants

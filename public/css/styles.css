@@ -235,6 +235,21 @@ a {
     text-align: center;
 }
 
+.dashboard-event-container tr, td {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ion-icon#trash-outline{
+    color: #ffffff;
+}
+
+/*Edit Page*/
+.img-preview{
+    width: 150px;
+    margin-top: 20px;
+}
+
 
 /* Footer */
 footer{

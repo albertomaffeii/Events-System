@@ -27,8 +27,20 @@
                         <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                         <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                         <td>0</td>
-                        <td class="action"><a href="#">Editar</a></td>
-                        <td class="action"><a href="#">Deletar</a></td>
+                        <td class="action">
+                            <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn">
+                                <ion-icon name="create-outline"></ion-icon>Editar
+                            </a>
+                        </td>
+                        <td>
+                            <form action="/events/{{ $event->id }}" method="POST" >
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger delete-btn">
+                                    <ion-icon id="trash-outline" name="trash-outline"></ion-icon>Delete
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach                
             </tbody>
