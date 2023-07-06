@@ -26,7 +26,7 @@
                         <td scropt="row">{{ $loop->index +1 }}</td>
                         <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
                         <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
-                        <td>0</td>
+                        <td>{{ count($event->users) }}</td>
                         <td class="action">
                             <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn">
                                 <ion-icon name="create-outline"></ion-icon>Editar

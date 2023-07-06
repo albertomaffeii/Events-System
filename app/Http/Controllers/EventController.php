@@ -113,7 +113,7 @@ class EventController extends Controller
 
             $extension = $requestImage->extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $imageName = $request->actual;//md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
             $requestImage->move(public_path('img/events'), $imageName);
 
@@ -125,7 +125,16 @@ class EventController extends Controller
 
     }
 
+    public function joinEvent($id){
 
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->attach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Your presence is confirmed at the event ' . $event->title);
+    }
 
 
 }

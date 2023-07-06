@@ -217,6 +217,10 @@ header {
     display: flex;
 }
 
+.event-date, .events-participants, .events-owner {
+    padding-top: 5px;
+}
+
 /* Dashboard */
 .dashboard-title-container {
     margin-top: 20px;
@@ -247,7 +251,11 @@ ion-icon#trash-outline{
 /*Edit Page*/
 .img-preview{
     width: 150px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.newimagetext {
+    margin-top: 10px;
 }
 
 

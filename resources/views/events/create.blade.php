@@ -40,7 +40,7 @@
         </div>
         <div class="form-group">
             <label for="description">Description:</label>
-            <textarea name="description" id="description" class="form-control" placeholder="What will happen at the event."></textarea>
+            <textarea name="description" cols="30" rows="10" id="description" class="form-control" placeholder="What will happen at the event."></textarea>
         </div>
         <div class="form-group">
             <label for="items">Add infrastructure items</label>
@@ -90,7 +90,7 @@
             </div>           
         </div>
         <div class="sendBtnBox">
-            <input type="submit" class="btn btn-primary" value="create event">
+            <input type="submit" class="btn btn-primary" value="Create Event">
         </div>
     </form>
 </div>

@@ -10,15 +10,15 @@
         @csrf
         @method('PUT')
         <div class="col-md-12 row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label for="actual-image">Actual Event image:</label>
-                <input type="hidden" id="image" name="image" value="{{ $event->image }}">
+                <input type="hidden" id="actual" name="actual" value="{{ $event->image }}">
                 <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="img-preview">
 
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-8">
                 <label for="image">New event image:</label>
-                <p>To change the event image, click the button below and select a new image.<br></p>
+                <p class="newimagetext">To change the event image, click the button below and select a new image.<br></p>
                 <input type="file" class="form-control-file" id="image" name="image">
             </div>
         </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="form-group">
             <label for="description">Description:</label>
-            <textarea name="description" id="description" class="form-control" placeholder="What will happen at the event.">{{ $event->description }}</textarea>
+            <textarea name="description" cols="30" rows="10" id="description" class="form-control" placeholder="What will happen at the event.">{{ $event->description }}</textarea>
         </div>
         <div class="form-group">
             <label for="items">Add infrastructure items</label>
