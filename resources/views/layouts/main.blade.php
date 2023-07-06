@@ -17,7 +17,7 @@
         <!-- Aplication CSS -->
         <link rel="stylesheet" href="/css/styles.css">
         <script src="/js/scripts.js"></script>    
-    </head>
+    </head>   
 
     <body class="antialiased">
         <header>
