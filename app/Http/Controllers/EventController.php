@@ -71,12 +71,26 @@ class EventController extends Controller
     }
     
     public function show($id){
+
         $event = Event::findOrfail($id);
+
+        $user = auth()->user();
+        $hasUserJoined = false;
+
+        if($user) {
+            $userEvents = $user->eventsAsParticipant->toArray();
+
+            foreach ($userEvents as $userEvent) {
+                if($userEvent['id'] == $id) {
+                    $hasUserJoined = true;
+                }
+            }
+        }
 
         //Event Owner
         $eventOwner = User::where('id', '=', $event->user_id)->first()->toArray();
 
-        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);    
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);    
     }
 
     public function dashboard() {
@@ -146,5 +160,14 @@ class EventController extends Controller
         return redirect('/dashboard')->with('msg', 'Your presence is confirmed at the event ' . $event->title);
     }
 
+    public function leaveEvent($id){
 
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->detach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'You are no longer participating in the event: ' . $event->title);
+    }
 }

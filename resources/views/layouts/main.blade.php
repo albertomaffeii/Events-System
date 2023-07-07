@@ -27,11 +27,8 @@
                         <img src="/img/logo.jpeg" alt="Allsites Events">
                     </a>
                     <ul class="navbar-nav">
-                        <li class="nav item">
-                            <a href="/" class="nav-link"><ion-icon name="home-outline"></ion-icon></a>
-                        </li>
                         <li class="nav-item">
-                            <a href="/events" class="nav-link">Events</a>
+                            <a href="/" class="nav-link"><ion-icon name="home-outline"></ion-icon> Events</a>
                         </li>
                         <li class="nav-item">
                             <a href="/events/create" class="nav-link">New Events</a>

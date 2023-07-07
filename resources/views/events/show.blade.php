@@ -28,16 +28,22 @@
                 {{ $eventOwner['name'] }}
             </p>
 
-            <form action="/events/join/{{ $event->id }}" method="POST">
-                @csrf
-                <a href="/events/join/{{ $event->id }}" 
-                    class="btn btn-primary" 
-                    id="event-submit" 
-                    onclick="event.preventDefault(); 
-                        this.closest('form').submit()">
-                    Confirmar presença
-                </a> 
-            </form>
+            @if(!$hasUserJoined)
+
+                <form action="/events/join/{{ $event->id }}" method="POST">
+                    @csrf
+                    <a href="/events/join/{{ $event->id }}" 
+                        class="btn btn-primary" 
+                        id="event-submit" 
+                        onclick="event.preventDefault(); 
+                            this.closest('form').submit()">
+                        Confirmar presença
+                    </a> 
+                </form>
+
+            @else
+                <p class="already-joined-msg">You are already participating in this event.</p>
+            @endif
 
             <h3>The event features:</h3>
             <ul id="items-list">
